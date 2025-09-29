@@ -215,8 +215,6 @@ export default function App() {
     }
   };
 
-
-
   const handleStartChat = (initialMessage?: string) => {
     if (initialMessage) {
       handleSendMessage(initialMessage);
@@ -257,19 +255,12 @@ export default function App() {
     if (sidebarState === 'collapsed') {
       setSidebarState('hover-expanded');
     }
-    setIsHeaderVisible(true);
   };
 
   const handleSidebarLeave = () => {
     if (sidebarState === 'hover-expanded') {
       setSidebarState('collapsed');
     }
-    // Check mouse position - if not at top, hide header after a short delay
-    setTimeout(() => {
-      if (mouseY > 100) {
-        setIsHeaderVisible(false);
-      }
-    }, 150);
   };
 
   const handleCopyMessage = (content: string) => {

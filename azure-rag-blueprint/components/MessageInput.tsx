@@ -91,8 +91,6 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
     }
   };
 
-
-
   // Dynamic placeholder based on focus state
   const currentPlaceholder = isFocused ? "Type for magic..." : "Your chats are private and secure";
 
@@ -131,7 +129,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 bg-transparent z-50 px-4 py-4 transition-all duration-300 ${
-      sidebarState === 'collapsed' ? 'ml-12' : 'ml-110'
+      sidebarState === 'collapsed' ? 'ml-12' : 'ml-80'
     }`}>
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-full shadow-sm px-2 py-2 my-[0px] mx-[70px] relative">
