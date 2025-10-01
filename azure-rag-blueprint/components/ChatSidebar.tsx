@@ -46,7 +46,7 @@ export function ChatSidebar({
     <div
       className={cn(
         "fixed inset-y-0 left-0 z-50 bg-transparent transition-all duration-300 ease-in-out flex flex-col",
-        isCollapsed ? "w-16" : "w-80"
+        isCollapsed ? "w-[72px]" : "w-80"
       )}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
