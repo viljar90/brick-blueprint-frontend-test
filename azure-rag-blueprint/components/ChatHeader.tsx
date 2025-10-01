@@ -9,24 +9,24 @@ interface ChatHeaderProps {
   isVisible?: boolean;
 }
 
-export function ChatHeader({ 
-  companyName = "Your Company", 
+export function ChatHeader({
+  companyName = "Your Company",
   logoUrl,
   onSettingsClick,
   sidebarState = 'collapsed',
   isVisible = false
 }: ChatHeaderProps) {
   return (
-    <header className={`fixed top-0 right-0 z-50 py-[0px] p-[0px] mt-[0px] mr-[0px] mb-[0px] transition-all duration-300 ease-in-out ${
+    <header className={`fixed top-0 right-0 z-40 transition-all duration-300 ease-in-out ${
       isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
     } ${
-      sidebarState === 'collapsed' ? 'left-12' : 'left-74'
+      sidebarState === 'collapsed' ? 'left-[72px]' : 'left-80'
     }`}>
-      <div className="flex h-14.5 items-center justify-between bg-white rounded-xl shadow-md mt-[12px] mx-4 transform transition-all duration-300 mr-[16px] mb-[0px] ml-[32px] px-[16px] py-[0px] pt-[0px] pr-[8px] pb-[0px] pl-[24px]">
+      <div className="flex h-16 items-center justify-between bg-white rounded-xl shadow-md m-3 p-2 px-6">
         <div className="flex items-center gap-3">
           {logoUrl ? (
-            <img 
-              src={logoUrl} 
+            <img
+              src={logoUrl}
               alt={`${companyName} logo`}
               className="h-8 w-auto"
             />
@@ -37,7 +37,7 @@ export function ChatHeader({
               </span>
             </div>
           )}
-          
+
           <div>
             <h1 className="font-medium text-foreground">{companyName} AI Assistant</h1>
             <p className="text-sm text-muted-foreground">Powered by AI</p>
