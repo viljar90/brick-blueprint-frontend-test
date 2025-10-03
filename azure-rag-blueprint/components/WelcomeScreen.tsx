@@ -45,7 +45,7 @@ export function WelcomeScreen({
           <Button
             key={index}
             variant="ghost"
-            className="w-full text-left justify-start h-auto py-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+            className="w-full text-left justify-start h-auto py-3 bg-white rounded-lg shadow-md hover:shadow-sm transition-shadow duration-200"
             onClick={() => onStartChat(prompt)}
           >
             {prompt}

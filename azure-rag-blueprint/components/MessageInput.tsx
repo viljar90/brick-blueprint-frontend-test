@@ -132,7 +132,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
       sidebarState === 'collapsed' ? 'ml-12' : 'ml-80'
     }`}>
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-full shadow-sm px-2 py-2 my-[0px] mx-[70px] relative">
+        <div className="bg-white rounded-full shadow-md px-2 py-2 my-[0px] mx-[70px] relative">
           <form onSubmit={handleSubmit} className="flex items-center gap-1">
             {/* Quick Actions Menu */}
             <div className="relative" ref={menuRef}>
@@ -153,7 +153,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
               </Button>
               
               {isMenuOpen && (
-                <div className="absolute bottom-full left-0 mb-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-[9999] py-2 px-[0px] py-[4px]">
+                <div className="absolute bottom-full left-0 mb-2 w-48 bg-white border border-gray-200 rounded-lg shadow-md z-[9999] py-2 px-[3px] py-[4px]">
                   {quickActions.map((action, index) => (
                     <button
                       key={index}

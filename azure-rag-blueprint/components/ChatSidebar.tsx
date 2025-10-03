@@ -52,7 +52,7 @@ export function ChatSidebar({
       onMouseLeave={onLeave}
     >
       {/* Header */}
-      <div className={cn("flex items-center bg-white rounded-xl shadow-sm relative mt-3 mb-1 p-2 h-16",
+      <div className={cn("flex items-center bg-white rounded-xl shadow-md relative mt-3 mb-1 p-2 h-16",
         isExpanded ? "mx-3" : "mx-3 w-fit"
       )}>
         <div className="flex items-center gap-3 py-[0px] p-[0px]">
@@ -154,7 +154,7 @@ export function ChatSidebar({
           // Collapsed state - aligned to left consistently
           <div className="flex flex-col justify-between h-full">
             {/* Recent chats icon card */}
-            <div className="bg-white rounded-lg shadow-sm w-12 px-[8px] py-[0px] pt-[2px] pr-[8px] pb-[0px] pl-[8px]">
+            <div className="bg-white rounded-lg shadow-md w-12 px-[8px] py-[0px] pt-[2px] pr-[8px] pb-[0px] pl-[8px]">
               <ScrollArea className="max-h-[calc(100vh-200px)]">
                 <div className="flex flex-col space-y-2 px-[0px] py-[8px] p-[0px]">
                   {chatHistory.map((chat) => (
@@ -174,7 +174,7 @@ export function ChatSidebar({
             </div>
 
             {/* Actions icon card - positioned at bottom */}
-            <div className="bg-white rounded-lg shadow-sm p-2 w-12">
+            <div className="bg-white rounded-lg shadow-md p-2 w-12">
               <div className="flex flex-col space-y-2">
                 <Button
                   variant="ghost"
