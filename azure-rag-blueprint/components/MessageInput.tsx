@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { Send, Square, Plus, MessageCircle, Paperclip } from 'lucide-react';
 import { Button } from './ui/button';
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
 } from './ui/dropdown-menu';
 
 interface MessageInputProps {
@@ -23,12 +23,12 @@ export interface MessageInputRef {
   focus: () => void;
 }
 
-export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({ 
-  onSendMessage, 
+export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
+  onSendMessage,
   onStopResponse,
   onNewChat,
   onFileUpload,
-  isLoading = false, 
+  isLoading = false,
   placeholder = "Create magic...",
   disabled = false,
   sidebarState = 'collapsed'
@@ -132,7 +132,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
       sidebarState === 'collapsed' ? 'ml-12' : 'ml-80'
     }`}>
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-full shadow-md px-2 py-2 my-[0px] mx-[70px] relative">
+        <div className="bg-white rounded-full shadow-md hover:shadow-lg px-2 py-2 my-[0px] mx-[70px] relative focus-within:shadow-lg transition-all duration-200 hover:scale-[1.02] focus-within:scale-[1.02]">
           <form onSubmit={handleSubmit} className="flex items-center gap-1">
             {/* Quick Actions Menu */}
             <div className="relative" ref={menuRef}>
@@ -141,8 +141,8 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
                 size="icon"
                 variant="ghost"
                 className={`h-10 w-10 rounded-full flex-shrink-0 transition-colors duration-200 ${
-                  isMenuOpen 
-                    ? 'bg-black text-white hover:bg-black hover:text-white' 
+                  isMenuOpen
+                    ? 'bg-black text-white hover:bg-black hover:text-white'
                     : '!hover:bg-gray-100 !hover:text-gray-900'
                 }`}
                 disabled={disabled}
@@ -151,7 +151,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
                 <Plus className={`h-4 w-4 transition-transform duration-200 ${isMenuOpen ? 'rotate-45' : ''}`} />
                 <span className="sr-only">Quick actions</span>
               </Button>
-              
+
               {isMenuOpen && (
                 <div className="absolute bottom-full left-0 mb-2 w-48 bg-white border border-gray-200 rounded-lg shadow-md z-[9999] py-2 px-[3px] py-[4px]">
                   {quickActions.map((action, index) => (
@@ -167,7 +167,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
                 </div>
               )}
             </div>
-            
+
             {/* Hidden file input */}
             <input
               ref={fileInputRef}
@@ -176,7 +176,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
               className="hidden"
               accept="image/*,text/*,.pdf,.doc,.docx"
             />
-            
+
             {/* Input Field */}
             <input
               ref={inputRef}
@@ -190,7 +190,7 @@ export const MessageInput = forwardRef<MessageInputRef, MessageInputProps>(({
               disabled={disabled}
               className="flex-1 h-10 bg-transparent border-0 outline-none px-3 text-foreground placeholder:text-muted-foreground"
             />
-            
+
             {/* Send/Stop Button */}
             <Button
               type="submit"

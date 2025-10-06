@@ -22,7 +22,7 @@ export function ChatHeader({
     } ${
       sidebarState === 'collapsed' ? 'left-[72px]' : 'left-80'
     }`}>
-      <div className="flex h-16 items-center justify-between bg-white rounded-xl shadow-md m-3 p-2 px-6">
+      <div className="flex h-16 items-center justify-between bg-white rounded-xl shadow-md hover:shadow-lg m-3 p-2 px-6 transition-all duration-200 hover:scale-[1.01]">
         <div className="flex items-center gap-3">
           {logoUrl ? (
             <img

@@ -25,7 +25,7 @@ export function WelcomeScreen({
         </div>
         
         <h1 className="text-3xl font-medium mb-2">
-          Welcome to {companyName} AI Assistant
+          {companyName} AI Assistant
         </h1>
         
         <p className="text-muted-foreground max-w-md">
@@ -37,15 +37,12 @@ export function WelcomeScreen({
 
 
       <div className="space-y-2 w-full max-w-md">
-        <p className="text-sm text-muted-foreground text-center mb-3">
-          Try these conversation starters:
-        </p>
         
         {suggestedPrompts.map((prompt, index) => (
           <Button
             key={index}
             variant="ghost"
-            className="w-full text-left justify-start h-auto py-3 bg-white rounded-lg shadow-md hover:shadow-sm transition-shadow duration-200"
+            className="w-full text-left justify-start h-auto py-4 bg-white rounded-lg shadow-md hover:shadow-sm transition-all duration-200 hover:scale-[1.01]"
             onClick={() => onStartChat(prompt)}
           >
             {prompt}

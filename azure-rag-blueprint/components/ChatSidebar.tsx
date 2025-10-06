@@ -52,7 +52,7 @@ export function ChatSidebar({
       onMouseLeave={onLeave}
     >
       {/* Header */}
-      <div className={cn("flex items-center bg-white rounded-xl shadow-md relative mt-3 mb-1 p-2 h-16",
+      <div className={cn("flex items-center bg-white rounded-xl shadow-md hover:shadow-lg relative mt-3 mb-1 p-2 h-16 transition-all duration-200 hover:scale-[1.01]",
         isExpanded ? "mx-3" : "mx-3 w-fit"
       )}>
         <div className="flex items-center gap-3 py-[0px] p-[0px]">
@@ -83,7 +83,7 @@ export function ChatSidebar({
         {isExpanded ? (
           <>
             {/* Chat History Card */}
-            <div className="bg-white rounded-xl shadow-md flex-1 min-h-0 relative">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg flex-1 min-h-0 relative transition-all duration-200 hover:scale-[1.01]">
               <div className="h-full py-[8px] p-[8px]">
                 <div className="h-full overflow-y-auto scrollbar-thin">
                   <div className="space-y-2">
@@ -130,7 +130,7 @@ export function ChatSidebar({
             </div>
 
             {/* Actions Card */}
-            <div className="bg-white rounded-xl shadow-md">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.01]">
               <div className="p-4 space-y-2">
                 <Button
                   variant="ghost"
@@ -174,7 +174,7 @@ export function ChatSidebar({
             </div>
 
             {/* Actions icon card - positioned at bottom */}
-            <div className="bg-white rounded-lg shadow-md p-2 w-12">
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg p-2 w-12">
               <div className="flex flex-col space-y-2">
                 <Button
                   variant="ghost"
